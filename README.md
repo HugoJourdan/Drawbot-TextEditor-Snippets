@@ -1,2 +1,8 @@
 # Drawbot-TextEdior-Snippets
-DrawBot API auto-completion for VSCode, TextMate and Atom
+DrawBot auto-completion snippets for VSCode, TextMate and Atom
+
+
+## VSCode
+
+Press `Shift + Command + P`, search `Configure User Snippets`, then select. `python.json` 
+After that copy/paste content from `VSCode DrawBot Snippets` in `python.json` 
