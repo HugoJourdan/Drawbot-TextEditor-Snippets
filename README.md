@@ -1,2 +1,2 @@
 # Drawbot-TextEdior-Snippets
-DrawBot API snippets for VSCode, TextMate and Atom
+DrawBot API auto-completion for VSCode, TextMate and Atom
