@@ -1,0 +1,618 @@
+Drawbot Snippet Atom
+
+'Draw a rectangle from position x, y with the given width and height.':
+  'prefix': 'rect'
+  'body': """
+    rect(${1:x}, ${2:y}, ${3:w}, ${4:h})
+  """
+
+
+'Draw an oval from position x, y with the given width and height.':
+  'prefix': 'oval'
+  'body': """
+    oval(${1:x}, ${2:y}, ${3:w}, ${4:h})
+  """
+
+
+'Draw an oval from position x, y with the given width and height.':
+  'prefix': 'line'
+  'body': """
+    line((${1:x1}, ${2:y1}), (${3:x2}, ${4:y2})))
+  """
+
+'Draws a polygon with n-amount of points. Optionally a close argument can be provided to open or close the path. As default a polygon is a closed path.':
+  'prefix': 'polygon'
+  'body': """
+    polygon((x1, y1), (x2, y2), ..., close=True)
+  """
+
+'Using bezier paths.':
+  'prefix': 'newPath'
+  'body': """
+    newPath()
+  """
+
+
+'Move to a point x, y.':
+  'prefix': 'moveTo'
+  'body': """
+    moveTo(xy)
+  """
+
+'Line to a point x, y.':
+  'prefix': 'lineTo'
+  'body': """
+    lineTo(xy)
+  """
+
+'Curve to a point x3, y3. With given bezier handles x1, y1 and x2, y2.':
+  'prefix': 'curveTo'
+  'body': """
+    curveTo(xy1, xy2, xy3)
+  """
+
+'Quadratic curve with a given set of off curves to a on curve.':
+'prefix': 'qCurveTo'
+'body': """
+qCurveTo(*points)
+"""
+
+'Arc with center and a given radius, from startAngle to endAngle, going clockwise if clockwise is True and counter clockwise if clockwise is False.':
+  'prefix': 'arc'
+  'body': """
+    arc(center, radius, startAngle, endAngle, clockwise)
+  """
+
+'Arc from one point to an other point with a given radius.':
+  'prefix': 'arcTo'
+  'body': """
+    (xy1, xy2, radius)
+  """
+
+'Close the path.':
+  'prefix': 'closePath'
+  'body': """
+    closePath()
+  """
+
+'Draw the current path, or draw the provided path.':
+  'prefix': 'drawPath'
+  'body': """
+    drawPath(path=None)
+  """
+
+'Use the given path as a clipping path, or the current path if no path was given.  Everything drawn after a clipPath() call will be clipped by the clipping path. To “undo” the clipping later, make sure you do the clipping inside a with savedState(): blockent path, or draw the provided path.':
+  'prefix': 'clipPath'
+  'body': """
+    clipPath(path=None)
+  """
+
+  'Sets stroke width.':
+  'prefix': 'strokeWidth'
+  'body': """
+    strokeWidth(value)
+    
+  """
+
+  'Set a miter limit. Used on corner points.':
+  'prefix': 'miterLimit'
+  'body': """
+    miterLimit(value)
+  """
+
+  'Set a line join.  Possible values are miter, round and bevel.':
+  'prefix': 'lineJoin'
+  'body': """
+    lineJoin(value)
+    
+  """
+
+  'Set a line cap.  Possible values are butt, square and round.':
+  'prefix': 'lineCap'
+  'body': """
+    lineCap(value)
+  """
+
+  'Set a line dash with any given amount of lenghts. Uneven lenghts will have a visible stroke, even lenghts will be invisible.':
+  'prefix': 'lineDash'
+  'body': """
+    lineDash(*value)
+  """
+
+  'Return a BezierPath object. This is a reusable object, if you want to draw the same over and over again.':
+  'prefix': 'BezierPath'
+  'body': """
+    BezierPath(path=None, glyphSet=None)
+  """
+
+  'Begin using the path as a so called point pen and start a new subpath.':
+  'prefix': 'beginPath'
+  'body': """
+    beginPath(identifier=None)
+  """
+
+  'Use the path as a point pen and add a point to the current subpath. beginPath must have been called prior to adding points with addPoint calls.':
+  'prefix': 'addPoint'
+  'body': """
+    addPoint(point, segmentType=None, smooth=False, name=None, identifier=None, **kwargs)
+  """
+
+  'End the current subpath. Calling this method has two distinct meanings depending on the context:  When the bezier path is used as a segment pen (using moveTo, lineTo, etc.), the current subpath will be finished as an open contour.  When the bezier path is used as a point pen (using beginPath, addPoint and endPath), the path will process all the points added with addPoint, finishing the current subpath.':
+  'prefix': 'endPath'
+  'body': """
+    endPath()
+  """
+
+  'Add a sub glyph. The ‘transformation’ argument must be a 6-tuple containing an affine transformation, or a Transform object from the fontTools.misc.transform module. More precisely: it should be a sequence containing 6 numbers.  A glyphSet is required during initialization of the BezierPath object.':
+  'prefix': 'addComponent'
+  'body': """
+    addComponent(glyphName, transformation)
+  """
+
+  'Draw the bezier path into a pen':
+  'prefix': 'drawToPen'
+  'body': """
+    drawToPen(pen)
+  """
+
+  'Draw the bezier path into a point pen.':
+  'prefix': 'drawToPointPen'
+  'body': """
+    drawToPointPen(pointPen)
+  """
+
+'Draws a txt with a font and fontSize in a box in the bezier path. If a font path is given the font will be installed and used directly.  Optionally an alignment can be set. Possible align values are: “left”, “center” and “right”.':
+  'prefix': 'textBox'
+  'body': """
+    textBox(txt, box, align=None)
+  """
+
+  'Draw a text at a provided position.  Optionally an alignment can be set. Possible align values are: “left”, “center” and “right”.  The default alignment is left.  Optionally txt can be a FormattedString.':
+  'prefix': 'text'
+  'body': """
+    text(txt, (x, y), align=None)
+  """
+
+  'Sets the fill color with a red, green, blue and alpha value. Each argument must a value float between 0 and 1.':
+  'prefix': 'fill'
+  'body': """
+    fill(r=None, g=None, b=None, alpha=1)
+  """
+
+  'A linear gradient fill with:  startPoint as (x, y) endPoint as (x, y) colors as a list of colors, described similary as fill locations of each color as a list of floats. (optionally) Setting a gradient will ignore the fill.':
+  'prefix': 'linearGradient'
+  'body': """
+    linearGradient(startPoint=None, endPoint=None, colors=None, locations=None)
+  """
+
+  'A radial gradient fill with:  startPoint as (x, y) endPoint as (x, y) colors as a list of colors, described similary as fill locations of each color as a list of floats. (optionally) startRadius radius around the startPoint in degrees (optionally) endRadius radius around the endPoint in degrees (optionally) Setting a gradient will ignore the fill.':
+  'prefix': 'radialGradient'
+  'body': """
+    radialGradient(startPoint=None, endPoint=None, colors=None, locations=None, startRadius=0, endRadius=100)
+  """
+
+  'Adds a shadow with an offset (x, y), blur and a color. The color argument must be a tuple similarly as fill. The offset`and `blur argument will be drawn independent of the current context transformations.':
+  'prefix': 'shadow'
+  'body': """
+    shadow(offset, blur=None, color=None)
+  """
+
+  'Sets the stroke color with a red, green, blue and alpha value. Each argument must a value float between 0 and 1.':
+  'prefix': 'stroke'
+  'body': """
+    stroke(r=None, g=None, b=None, alpha=1)
+  """
+
+  'Set a fill using a CMYK color before drawing a shape. This is handy if the file is intended for print.  Sets the CMYK fill color. Each value must be a float between 0.0 and 1.0.':
+  'prefix': 'cmykFill'
+  'body': """
+    cmykFill(c, m=None, y=None, k=None, alpha=1)
+  """
+
+  'A cmyk linear gradient fill with:  startPoint as (x, y) endPoint as (x, y) colors as a list of colors, described similary as cmykFill locations of each color as a list of floats. (optionally) Setting a gradient will ignore the fill.':
+  'prefix': 'cmykLinearGradient'
+  'body': """
+    cmykLinearGradient(startPoint=None, endPoint=None, colors=None, locations=None)
+  """
+
+  'A cmyk radial gradient fill with:  startPoint as (x, y) endPoint as (x, y) colors as a list of colors, described similary as cmykFill locations of each color as a list of floats. (optionally) startRadius radius around the startPoint in degrees (optionally) endRadius radius around the endPoint in degrees (optionally) Setting a gradient will ignore the fill.':
+  'prefix': 'cmykRadialGradient'
+  'body': """
+    cmykRadialGradient(startPoint=None, endPoint=None, colors=None, locations=None, startRadius=0, endRadius=100)
+  """
+
+  'Adds a cmyk shadow with an offset (x, y), blur and a color. The color argument must be a tuple similarly as cmykFill.':
+  'prefix': 'cmykShadow'
+  'body': """
+    cmykShadow(offset, blur=None, color=None)
+  """
+
+  'Set a stroke using a CMYK color before drawing a shape. This is handy if the file is intended for print.  Sets the CMYK stroke color. Each value must be a float between 0.0 and 1.0.':
+  'prefix': 'cmykStroke'
+  'body': """
+    cmykStroke(c, m=None, y=None, k=None, alpha=1)
+  """
+
+  'Create a new canvas to draw in. This will act like a page in a pdf or a frame in a mov.  Optionally a width and height argument can be provided to set the size. If not provided the default size will be used.  Alternatively size(‘A4’) with a supported papersizes or size(‘screen’) setting the current screen size as size, can be used.':
+  'prefix': 'newPage'
+  'body': """
+    newPage(width=None, height=None)
+  """
+
+  'Reset the drawing stack to the clean and empty stack.':
+  'prefix': 'newDrawing'
+  'body': """
+    newDrawing()
+  """
+
+  'Explicitly tell drawBot the drawing is done. This is advised when using drawBot as a standalone module.':
+  'prefix': 'endDrawing'
+  'body': """
+    endDrawing()
+  """
+
+  'Set the width and height of the canvas. Without calling size() the default drawing board is 1000 by 1000 points.  Alternatively size(‘A4’) with a supported papersizes or size(‘screen’) setting the current screen size as size, can be used.  Afterwards the functions width() and height() can be used for calculations.  You have to use size() before any drawing-related code, and you can’t use size() in a multi-page document. Use newPage(w, h) to set the correct dimensions for each page.':
+  'prefix': 'size'
+  'body': """
+    size(width, height=None)
+  """
+
+  'Returns the width and height of a specified canvas size. If no canvas size is given it will return the dictionary containing all possible page sizes.':
+  'prefix': 'sizes'
+  'body': """
+    sizes(paperSize=None)
+  """
+
+  'Returns the width of the current page.':
+  'prefix': 'width'
+  'body': """
+    width()
+  """
+
+  'Returns the height of the current page.':
+  'prefix': 'height'
+  'body': """
+    height()
+  """
+
+  'Returns the current page count.':
+  'prefix': 'pageCount'
+  'body': """
+    pageCount()
+  """
+
+  'Return all pages.':
+  'prefix': 'pages'
+  'body': """
+    pages()
+  """
+
+  'When exporting to mov or gif each frame can have duration set in seconds.':
+  'prefix': 'frameDuration'
+  'body': """
+    frameDuration(seconds)
+  """
+
+  'Add a clickable rectangle for an external url link.  The link rectangle will be set independent of the current context transformations.':
+  'prefix': 'linkURL'
+  'body': """
+    linkURL(url, (x, y, w, h))
+  """
+
+  'Add a clickable rectangle for a link within a PDF. Use linkDestination(name, (x, y)) with the same name to set the destination of the clickable rectangle.  The link rectangle will be set independent of the current context transformations.':
+  'prefix': 'linkRect'
+  'body': """
+    linkRect(name, (x, y, w, h))
+  """
+
+  'Add a destination point for a link within a PDF. Setup a clickable retangle with linkRect(name, (x, y, w, h)) with the same name.  The destination position will be set independent of the current context transformations.':
+  'prefix': 'linkDestination'
+  'body': """
+    linkDestination(name, (x, y))
+  """
+
+  'Translate the canvas with a given offset.':
+  'prefix': 'translate'
+  'body': """
+    translate(x=0, y=0)
+  """
+
+  'Rotate the canvas around the center point (which is the origin by default) with a given angle in degrees.':
+  'prefix': 'rotate'
+  'body': """
+    rotate(angle, center=(0, 0))
+  """
+
+  'Scale the canvas with a given x (horizontal scale) and y (vertical scale).  If only 1 argument is provided a proportional scale is applied.  The center of scaling can optionally be set via the center keyword argument. By default this is the origin.':
+  'prefix': 'scale'
+  'body': """
+    scale(x=1, y=None, center=(0, 0))
+  """
+
+  'Skew the canvas with given angle1 and angle2.  If only one argument is provided a proportional skew is applied.  The center of skewing can optionally be set via the center keyword argument. By default this is the origin.':
+  'prefix': 'skew'
+  'body': """
+    skew(angle1, angle2=0, center=(0, 0))
+  """
+
+  'Transform the canvas with a transformation matrix.':
+  'prefix': 'transform'
+  'body': """
+    transform((xx, xy, yx, yy, x, y))
+  """
+
+  'Save and restore the current graphics state in a with statement.':
+  'prefix': 'savedState'
+  'body': """
+    savedState()
+  """
+
+  'DrawBot strongly recommends to use savedState() in a with statement instead.  Save the current graphics state. This will save the state of the canvas (with all the transformations) but also the state of the colors, strokes…':
+  'prefix': 'save'
+  'body': """
+    save()
+  """
+
+  'DrawBot strongly recommends to use savedState() in a with statement instead.  Restore from a previously saved graphics state. This will restore the state of the canvas (with all the transformations) but also the state of colors, strokes…':
+  'prefix': 'restore'
+  'body': """
+    restore()
+  """
+
+  'Save or export the canvas to a specified format. The path argument is a single destination path to save the current drawing actions.  The file extension is important because it will determine the format in which the image will be exported.  All supported file extensions: pdf, png, jpg, jpeg, tif, tiff, svg, gif, bmp, mp4, icns, *. (* will print out all actions.)  When exporting an animation or movie, each page represents a frame and the framerate is set by calling frameDuration() after each newPage().':
+  'prefix': 'saveImage'
+  'body': """
+    saveImage(paths, **options)
+  """
+
+  'Export the canvas to a printing dialog, ready to print.  Optionally a pdf object can be provided.':
+  'prefix': 'printImage'
+  'body': """
+    printImage(pdf=None)
+  """
+
+  'Return the image as a pdf document object.':
+  'prefix': 'pdfImage'
+  'body': """
+    pdfImage()
+  """
+
+  'Returns the size of a text with the current settings, like font, fontSize and lineHeight as a tuple (width, height).  Optionally a width constrain or height constrain can be provided to calculate the lenght or width of text with the given constrain.':
+  'prefix': 'textSize'
+  'body': """
+    textSize(txt, align=None, width=None, height=None)
+  """
+
+  'Returns the overflowed text without drawing the text.  A box could be a (x, y, w, h) or a bezierPath object.  Optionally an alignment can be set. Possible align values are: “left”, “center”, “right” and “justified”.  The default alignment is left.  Optionally txt can be a FormattedString. Optionally box can be a BezierPath.':
+  'prefix': 'textOverflow'
+  'body': """
+    textOverflow(txt, box, align=None)
+  """
+
+  'Returns a list of x, y coordinates indicating the start of each line for a given text in a given box.  A box could be a (x, y, w, h) or a bezierPath object.  Optionally an alignment can be set. Possible align values are: “left”, “center”, “right” and “justified”.':
+  'prefix': 'textBoxBaselines'
+  'body': """
+    textBoxBaselines(txt, box, align=None)
+  """
+
+  'Returns a list of typesetted bounding boxes ((x, y, w, h), baseLineOffset, characters, formattedString).  A box could be a (x, y, w, h) or a bezierPath object.':
+  'prefix': 'textBoxCharacterBounds'
+  'body': """
+    textBoxCharacterBounds(txt, box, align=None)
+  """
+
+  'Returns a list of all installed fonts.  Optionally a string with supportsCharacters can be provided, the list of available installed fonts will be filterd by support of these characters,':
+  'prefix': 'installedFonts'
+  'body': """
+    installedFonts(supportsCharacters=None)
+  """
+
+  'Install a font with a given path and the postscript font name will be returned. The postscript font name can be used to set the font as the active font.  Fonts are installed only for the current process. Fonts will not be accesible outside the scope of drawBot.  All installed fonts will automatically be uninstalled when the script is done.':
+  'prefix': 'installFont'
+  'body': """
+    installFont(path)
+  """
+
+  'Uninstall a font with a given path.  This function has been deprecated: please use the font path directly in all places that accept a font name.':
+  'prefix': 'uninstallFont'
+  'body': """
+    uninstallFont(path)
+  """
+
+  'Set a font with the name of the font. If a font path is given the font will be installed and used directly. Optionally a fontSize can be set directly. The default font, also used as fallback font, is ‘LucidaGrande’. The default fontSize is 10pt.  The name of the font relates to the font’s postscript name.  The font name is returned, which is handy when the font was loaded from a path.':
+  'prefix': 'font'
+  'body': """
+    font(fontNameOrPath, fontSize=None, fontNumber=0)
+  """
+
+  'Set the font size in points. The default fontSize is 10pt.':
+  'prefix': 'fontSize'
+  'body': """
+    fontSize(fontSize)
+  """
+
+  'Set a fallback font, this is used whenever a glyph is not available in the current font.':
+  'prefix': 'fallbackFont'
+  'body': """
+    fallbackFont(fontNameOrPath, fontNumber=0)
+  """
+
+  'Set hyphenation, True or False.':
+  'prefix': 'hyphenation'
+  'body': """
+    hyphenation(${1|True,False|})
+  """
+
+  'Set the line height.':
+  'prefix': 'lineHeight'
+  'body': """
+    lineHeight(value)
+  """
+
+  'Set the tracking between characters. It adds an absolute number of points between the characters.':
+  'prefix': 'tracking'
+  'body': """
+    tracking(value)
+  """
+
+  'Set the shift of the baseline.':
+  'prefix': 'baselineShift'
+  'body': """
+    baselineShift(value)
+  """
+
+  'Enable OpenType features.  Supported OpenType tags:  c2pc, c2sc, calt, case, cpsp, cswh, dlig, frac, liga, lnum, onum, ordn, pnum, rlig, sinf, smcp, ss01, ss02, ss03, ss04, ss05, ss06, ss07, ss08, ss09, ss10, ss11, ss12, ss13, ss14, ss15, ss16, ss17, ss18, ss19, ss20, subs, sups, swsh, titl, tnum. A resetFeatures argument can be set to True in order to get back to the default state.':
+  'prefix': 'openTypeFeatures'
+  'body': """
+    openTypeFeatures(frac=True, case=True, ...)
+  """
+
+  'List all OpenType feature tags for the current font.  Optionally a fontNameOrPath can be given. If a font path is given the font will be used directly.':
+  'prefix': 'listOpenTypeFeatures'
+  'body': """
+    listOpenTypeFeatures(fontNameOrPath=None)
+  """
+
+  'Pick a variation by axes values.':
+  'prefix': 'fontVariations'
+  'body': """
+    fontVariations(wdth=0.6, wght=0.1, ...)
+  """
+
+  'List all variation axes for the current font.  Returns a dictionary with all axis tags instance with an info dictionary with the following keys: name, minValue and maxValue. For non variable fonts an empty dictionary is returned.  Optionally a fontNameOrPath can be given. If a font path is given the font will be used directly.':
+  'prefix': 'listFontVariations'
+  'body': """
+    listFontVariations(fontNameOrPath=None)
+  """
+
+  'List all named instances from a variable font for the current font.  Returns a dictionary with all named instance as postscript names with their location. For non variable fonts an empty dictionary is returned.  Optionally a fontNameOrPath can be given. If a font path is given the font will be used directly.':
+  'prefix': 'listNamedInstances'
+  'body': """
+    listNamedInstances(fontNameOrPath=None)
+  """
+
+  'Set tabs, tuples of (float, alignment) Aligment can be “left”, “center”, “right” or any other character. If a character is provided the alignment will be right and centered on the specified character.':
+  'prefix': 'tabs'
+  'body': """
+    tabs(*tabs)
+  """
+
+  'Set the preferred language as language tag or None to use the default language.  Support is depending on local OS.  language() will activate the locl OpenType features, if supported by the current font.':
+  'prefix': 'language'
+  'body': """
+    language(language)
+  """
+
+  'Return a bool if the current font contains the provided characters. Characters is a string containing one or more characters.':
+  'prefix': 'fontContainsCharacters'
+  'body': """
+    fontContainsCharacters(characters)
+  """
+
+  'Return a bool if the current font contains a provided glyph name.':
+  'prefix': 'fontContainsGlyph'
+  'body': """
+    fontContainsGlyph(glyphName)
+  """
+
+  'Return the path to the file of the current font.':
+  'prefix': 'fontFilePath'
+  'body': """
+    fontFilePath()
+  """
+
+  'Return a list of glyph names supported by the current font.':
+  'prefix': 'listFontGlyphNames'
+  'body': """
+    listFontGlyphNames()
+  """
+
+  'Returns the current font descender, based on the current font and fontSize.':
+  'prefix': 'fontDescender'
+  'body': """
+    fontDescender()
+  """
+
+  'Returns the current font ascender, based on the current font and fontSize.':
+  'prefix': 'fontAscender'
+  'body': """
+    fontAscender()
+  """
+
+  'Returns the current font x-height, based on the current font and fontSize.':
+  'prefix': 'fontXHeight'
+  'body': """
+    fontXHeight()
+  """
+
+  'Returns the current font cap height, based on the current font and fontSize.':
+  'prefix': 'fontCapHeight'
+  'body': """
+    fontCapHeight()
+  """
+
+  'Returns the current font leading, based on the current font and fontSize.':
+  'prefix': 'fontLeading'
+  'body': """
+    fontLeading()
+  """
+
+  'Returns the current line height, based on the current font and fontSize. If a lineHeight is set, this value will be returned.':
+  'prefix': 'fontLineHeight'
+  'body': """
+    fontLineHeight()
+  """
+
+  'Return a string object that can handle text formatting.':
+  'prefix': 'FormattedString'
+  'body': """
+    FormattedString()
+  """
+
+  'Add txt to the formatted string with some additional text formatting attributes:  font: the font to be used for the given text, if a font path is given the font will be installed and used directly. fallbackFont: the fallback font fontSize: the font size to be used for the given text fill: the fill color to be used for the given text cmykFill: the cmyk fill color to be used for the given text stroke: the stroke color to be used for the given text cmykStroke: the cmyk stroke color to be used for the given text strokeWidth: the strokeWidth to be used for the given text align: the alignment to be used for the given text lineHeight: the lineHeight to be used for the given text tracking: set tracking for the given text in absolute points baselineShift: set base line shift for the given text openTypeFeatures: enable OpenType features fontVariations: pick a variation by axes values tabs: enable tabs indent: the indent of a paragraph tailIndent: the tail indent of a paragraph firstLineIndent: the first line indent of a paragraph paragraphTopSpacing: the spacing at the top of a paragraph paragraphBottomSpacing: the spacing at the bottom of a paragraph language: the language of the text All formatting attributes follow the same notation as other similar DrawBot methods. A color is a tuple of (r, g, b, alpha), and a cmykColor is a tuple of (c, m, y, k, alpha).  Text can also be added with formattedString += “hello”. It will append the text with the current settings of the formatted string.':
+  'prefix': 'append'
+  'body': """
+    append(txt, **kwargs)
+  """
+
+  'Add an image from a path with an offset and an alpha value. This should accept most common file types like pdf, jpg, png, tiff and gif.  Optionally an alpha can be provided, which is a value between 0 and 1.  Optionally a pageNumber can be provided when the path referes to a multi page pdf file.':
+  'prefix': 'image'
+  'body': """
+    image(path, (x, y), alpha=1, pageNumber=None)
+  """
+
+  'Return the width and height of an image.':
+  'prefix': 'imageSize'
+  'body': """
+    imageSize(path)
+  """
+
+  'Return the color r, g, b, a of an image at a specified x, y possition.':
+  'prefix': 'imagePixelColor'
+  'body': """
+    imagePixelColor(path, (x, y))
+  """
+
+  'Return the image resolution for a given image.':
+  'prefix': 'imageResolution'
+  'body': """
+    imageResolution(path)
+  """
+
+  'Return the number of pages for a given pdf or (animated) gif.':
+  'prefix': 'numberOfPages'
+  'body': """
+    numberOfPages(path)
+  """
+
+  'Return a Image object, packed with filters. This is a reusable object.':
+  'prefix': 'ImageObject'
+  'body': """
+    ImageObject(path=None)
+  """
+
+  'Build small UI for variables in a script.  The workSpace is usually globals() as you want to insert the variable in the current workspace. It is required that workSpace is a dict object.  The continuous argument controls whether the script is run when UI elements change. The default is True, which will execute the script immediately and continuously when the user input changes. When set to False, there will be an “Update” button added at the bottom of the window. The user will have to click this button to execute the script and see the changes. This is useful when the script is slow, and continuous execution would decrease responsiveness.':
+  'prefix': 'Variable'
+  'body': """
+    Variable(variables, workSpace, continuous=True)
+  """

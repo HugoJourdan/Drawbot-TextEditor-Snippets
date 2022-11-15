@@ -1,0 +1,921 @@
+
+<snippet>
+  <content><![CDATA[
+rect(${1:x}, ${2:y}, ${3:w}, ${4:h})
+]]></content>
+  <tabTrigger>rect</tabTrigger>
+  <description>Draw a rectangle from position x, y with the given width and height.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+	<content><![CDATA[
+  oval(${1:x}, ${2:y}, ${3:w}, ${4:h})
+  ]]></content>
+	<tabTrigger>oval</tabTrigger>
+	<description>Draw an oval from position x, y with the given width and height.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+<snippet>
+  <content><![CDATA[
+line((${1:x1}, ${2:y1}), (${3:x2}, ${4:y2})))
+]]></content>
+  <tabTrigger>line</tabTrigger>
+  <description>Draw an oval from position x, y with the given width and height.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+	<content><![CDATA[
+  polygon((x1, y1), (x2, y2), ..., close=True)
+  ]]></content>
+	<tabTrigger>polygon</tabTrigger>
+	<description>Draws a polygon with n-amount of points. Optionally a close argument can be provided to open or close the path. As default a polygon is a closed path.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+	<content><![CDATA[
+  newPath()
+  ]]></content>
+	<tabTrigger>newPath</tabTrigger>
+	<description>Using bezier paths.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+	<content><![CDATA[
+  moveTo(xy)
+  ]]></content>
+	<tabTrigger>moveTo</tabTrigger>
+	<description>Move to a point x, y.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+	<content><![CDATA[
+  lineTo(xy)
+  ]]></content>
+	<tabTrigger>lineTo</tabTrigger>
+	<description>Line to a point x, y.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+	<content><![CDATA[
+  curveTo(xy1, xy2, xy3)
+  ]]></content>
+	<tabTrigger>curveTo</tabTrigger>
+	<description>Curve to a point x3, y3. With given bezier handles x1, y1 and x2, y2.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+	<content><![CDATA[
+	qCurveTo(*points)
+	]]></content>
+	<tabTrigger>qCurveTo</tabTrigger>
+	<description>Quadratic curve with a given set of off curves to a on curve.</description>
+	<scope>source.python</scope>
+</snippet>
+
+<snippet>
+	<content><![CDATA[
+  arc(center, radius, startAngle, endAngle, clockwise)
+  ]]></content>
+	<tabTrigger>arc</tabTrigger>
+	<description>Arc with center and a given radius, from startAngle to endAngle, going clockwise if clockwise is True and counter clockwise if clockwise is False.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+	<content><![CDATA[
+  (xy1, xy2, radius)
+  ]]></content>
+	<tabTrigger>arcTo</tabTrigger>
+	<description>Arc from one point to an other point with a given radius.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+	<content><![CDATA[
+  closePath()
+  ]]></content>
+	<tabTrigger>closePath</tabTrigger>
+	<description>Close the path.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+	<content><![CDATA[
+  drawPath(path=None)
+  ]]></content>
+	<tabTrigger>drawPath</tabTrigger>
+	<description>Draw the current path, or draw the provided path.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+	<content><![CDATA[
+  clipPath(path=None)
+  ]]></content>
+	<tabTrigger>clipPath</tabTrigger>
+	<description>Use the given path as a clipping path, or the current path if no path was given.  Everything drawn after a clipPath() call will be clipped by the clipping path. To “undo” the clipping later, make sure you do the clipping inside a with savedState(): blockent path, or draw the provided path.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+	<content><![CDATA[
+  strokeWidth(value)
+  
+  ]]></content>
+	<tabTrigger>strokeWidth</tabTrigger>
+	<description>Sets stroke width.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+	<content><![CDATA[
+  miterLimit(value)
+  ]]></content>
+	<tabTrigger>miterLimit</tabTrigger>
+	<description>Set a miter limit. Used on corner points.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+	<content><![CDATA[
+  lineJoin(value)
+  
+  ]]></content>
+	<tabTrigger>lineJoin</tabTrigger>
+	<description>Set a line join.  Possible values are miter, round and bevel.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+	<content><![CDATA[
+  lineCap(value)
+  ]]></content>
+	<tabTrigger>lineCap</tabTrigger>
+	<description>Set a line cap.  Possible values are butt, square and round.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+	<content><![CDATA[
+  lineDash(*value)
+  ]]></content>
+	<tabTrigger>lineDash</tabTrigger>
+	<description>Set a line dash with any given amount of lenghts. Uneven lenghts will have a visible stroke, even lenghts will be invisible.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+	<content><![CDATA[
+  BezierPath(path=None, glyphSet=None)
+  ]]></content>
+	<tabTrigger>BezierPath</tabTrigger>
+	<description>Return a BezierPath object. This is a reusable object, if you want to draw the same over and over again.</description>
+	<scope>source.python</scope>
+  </snippet>
+
+  <snippet>
+  <content><![CDATA[
+beginPath(identifier=None)
+]]></content>
+  <tabTrigger>beginPath</tabTrigger>
+  <description>Begin using the path as a so called point pen and start a new subpath.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+addPoint(point, segmentType=None, smooth=False, name=None, identifier=None, **kwargs)
+]]></content>
+  <tabTrigger>addPoint</tabTrigger>
+  <description>Use the path as a point pen and add a point to the current subpath. beginPath must have been called prior to adding points with addPoint calls.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+endPath()
+]]></content>
+  <tabTrigger>endPath</tabTrigger>
+  <description>End the current subpath. Calling this method has two distinct meanings depending on the context:  When the bezier path is used as a segment pen (using moveTo, lineTo, etc.), the current subpath will be finished as an open contour.  When the bezier path is used as a point pen (using beginPath, addPoint and endPath), the path will process all the points added with addPoint, finishing the current subpath.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+addComponent(glyphName, transformation)
+]]></content>
+  <tabTrigger>addComponent</tabTrigger>
+  <description>Add a sub glyph. The ‘transformation’ argument must be a 6-tuple containing an affine transformation, or a Transform object from the fontTools.misc.transform module. More precisely: it should be a sequence containing 6 numbers.  A glyphSet is required during initialization of the BezierPath object.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+drawToPen(pen)
+]]></content>
+  <tabTrigger>drawToPen</tabTrigger>
+  <description>Draw the bezier path into a pen</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+drawToPointPen(pointPen)
+]]></content>
+  <tabTrigger>drawToPointPen</tabTrigger>
+  <description>Draw the bezier path into a point pen.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+textBox(txt, box, align=None)
+]]></content>
+  <tabTrigger>textBox</tabTrigger>
+  <description>Draws a txt with a font and fontSize in a box in the bezier path. If a font path is given the font will be installed and used directly.  Optionally an alignment can be set. Possible align values are: “left”, “center” and “right”.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+text(txt, (x, y), align=None)
+]]></content>
+  <tabTrigger>text</tabTrigger>
+  <description>Draw a text at a provided position.  Optionally an alignment can be set. Possible align values are: “left”, “center” and “right”.  The default alignment is left.  Optionally txt can be a FormattedString.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+fill(r=None, g=None, b=None, alpha=1)
+]]></content>
+  <tabTrigger>fill</tabTrigger>
+  <description>Sets the fill color with a red, green, blue and alpha value. Each argument must a value float between 0 and 1.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+linearGradient(startPoint=None, endPoint=None, colors=None, locations=None)
+]]></content>
+  <tabTrigger>linearGradient</tabTrigger>
+  <description>A linear gradient fill with:  startPoint as (x, y) endPoint as (x, y) colors as a list of colors, described similary as fill locations of each color as a list of floats. (optionally) Setting a gradient will ignore the fill.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+radialGradient(startPoint=None, endPoint=None, colors=None, locations=None, startRadius=0, endRadius=100)
+]]></content>
+  <tabTrigger>radialGradient</tabTrigger>
+  <description>A radial gradient fill with:  startPoint as (x, y) endPoint as (x, y) colors as a list of colors, described similary as fill locations of each color as a list of floats. (optionally) startRadius radius around the startPoint in degrees (optionally) endRadius radius around the endPoint in degrees (optionally) Setting a gradient will ignore the fill.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+shadow(offset, blur=None, color=None)
+]]></content>
+  <tabTrigger>shadow</tabTrigger>
+  <description>Adds a shadow with an offset (x, y), blur and a color. The color argument must be a tuple similarly as fill. The offset`and `blur argument will be drawn independent of the current context transformations.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+stroke(r=None, g=None, b=None, alpha=1)
+]]></content>
+  <tabTrigger>stroke</tabTrigger>
+  <description>Sets the stroke color with a red, green, blue and alpha value. Each argument must a value float between 0 and 1.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+cmykFill(c, m=None, y=None, k=None, alpha=1)
+]]></content>
+  <tabTrigger>cmykFill</tabTrigger>
+  <description>Set a fill using a CMYK color before drawing a shape. This is handy if the file is intended for print.  Sets the CMYK fill color. Each value must be a float between 0.0 and 1.0.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+cmykLinearGradient(startPoint=None, endPoint=None, colors=None, locations=None)
+]]></content>
+  <tabTrigger>cmykLinearGradient</tabTrigger>
+  <description>A cmyk linear gradient fill with:  startPoint as (x, y) endPoint as (x, y) colors as a list of colors, described similary as cmykFill locations of each color as a list of floats. (optionally) Setting a gradient will ignore the fill.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+cmykRadialGradient(startPoint=None, endPoint=None, colors=None, locations=None, startRadius=0, endRadius=100)
+]]></content>
+  <tabTrigger>cmykRadialGradient</tabTrigger>
+  <description>A cmyk radial gradient fill with:  startPoint as (x, y) endPoint as (x, y) colors as a list of colors, described similary as cmykFill locations of each color as a list of floats. (optionally) startRadius radius around the startPoint in degrees (optionally) endRadius radius around the endPoint in degrees (optionally) Setting a gradient will ignore the fill.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+cmykShadow(offset, blur=None, color=None)
+]]></content>
+  <tabTrigger>cmykShadow</tabTrigger>
+  <description>Adds a cmyk shadow with an offset (x, y), blur and a color. The color argument must be a tuple similarly as cmykFill.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+cmykStroke(c, m=None, y=None, k=None, alpha=1)
+]]></content>
+  <tabTrigger>cmykStroke</tabTrigger>
+  <description>Set a stroke using a CMYK color before drawing a shape. This is handy if the file is intended for print.  Sets the CMYK stroke color. Each value must be a float between 0.0 and 1.0.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+newPage(width=None, height=None)
+]]></content>
+  <tabTrigger>newPage</tabTrigger>
+  <description>Create a new canvas to draw in. This will act like a page in a pdf or a frame in a mov.  Optionally a width and height argument can be provided to set the size. If not provided the default size will be used.  Alternatively size(‘A4’) with a supported papersizes or size(‘screen’) setting the current screen size as size, can be used.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+newDrawing()
+]]></content>
+  <tabTrigger>newDrawing</tabTrigger>
+  <description>Reset the drawing stack to the clean and empty stack.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+endDrawing()
+]]></content>
+  <tabTrigger>endDrawing</tabTrigger>
+  <description>Explicitly tell drawBot the drawing is done. This is advised when using drawBot as a standalone module.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+size(width, height=None)
+]]></content>
+  <tabTrigger>size</tabTrigger>
+  <description>Set the width and height of the canvas. Without calling size() the default drawing board is 1000 by 1000 points.  Alternatively size(‘A4’) with a supported papersizes or size(‘screen’) setting the current screen size as size, can be used.  Afterwards the functions width() and height() can be used for calculations.  You have to use size() before any drawing-related code, and you can’t use size() in a multi-page document. Use newPage(w, h) to set the correct dimensions for each page.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+sizes(paperSize=None)
+]]></content>
+  <tabTrigger>sizes</tabTrigger>
+  <description>Returns the width and height of a specified canvas size. If no canvas size is given it will return the dictionary containing all possible page sizes.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+width()
+]]></content>
+  <tabTrigger>width</tabTrigger>
+  <description>Returns the width of the current page.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+height()
+]]></content>
+  <tabTrigger>height</tabTrigger>
+  <description>Returns the height of the current page.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+pageCount()
+]]></content>
+  <tabTrigger>pageCount</tabTrigger>
+  <description>Returns the current page count.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+pages()
+]]></content>
+  <tabTrigger>pages</tabTrigger>
+  <description>Return all pages.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+frameDuration(seconds)
+]]></content>
+  <tabTrigger>frameDuration</tabTrigger>
+  <description>When exporting to mov or gif each frame can have duration set in seconds.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+linkURL(url, (x, y, w, h))
+]]></content>
+  <tabTrigger>linkURL</tabTrigger>
+  <description>Add a clickable rectangle for an external url link.  The link rectangle will be set independent of the current context transformations.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+linkRect(name, (x, y, w, h))
+]]></content>
+  <tabTrigger>linkRect</tabTrigger>
+  <description>Add a clickable rectangle for a link within a PDF. Use linkDestination(name, (x, y)) with the same name to set the destination of the clickable rectangle.  The link rectangle will be set independent of the current context transformations.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+linkDestination(name, (x, y))
+]]></content>
+  <tabTrigger>linkDestination</tabTrigger>
+  <description>Add a destination point for a link within a PDF. Setup a clickable retangle with linkRect(name, (x, y, w, h)) with the same name.  The destination position will be set independent of the current context transformations.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+translate(x=0, y=0)
+]]></content>
+  <tabTrigger>translate</tabTrigger>
+  <description>Translate the canvas with a given offset.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+rotate(angle, center=(0, 0))
+]]></content>
+  <tabTrigger>rotate</tabTrigger>
+  <description>Rotate the canvas around the center point (which is the origin by default) with a given angle in degrees.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+scale(x=1, y=None, center=(0, 0))
+]]></content>
+  <tabTrigger>scale</tabTrigger>
+  <description>Scale the canvas with a given x (horizontal scale) and y (vertical scale).  If only 1 argument is provided a proportional scale is applied.  The center of scaling can optionally be set via the center keyword argument. By default this is the origin.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+skew(angle1, angle2=0, center=(0, 0))
+]]></content>
+  <tabTrigger>skew</tabTrigger>
+  <description>Skew the canvas with given angle1 and angle2.  If only one argument is provided a proportional skew is applied.  The center of skewing can optionally be set via the center keyword argument. By default this is the origin.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+transform((xx, xy, yx, yy, x, y))
+]]></content>
+  <tabTrigger>transform</tabTrigger>
+  <description>Transform the canvas with a transformation matrix.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+savedState()
+]]></content>
+  <tabTrigger>savedState</tabTrigger>
+  <description>Save and restore the current graphics state in a with statement.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+save()
+]]></content>
+  <tabTrigger>save</tabTrigger>
+  <description>DrawBot strongly recommends to use savedState() in a with statement instead.  Save the current graphics state. This will save the state of the canvas (with all the transformations) but also the state of the colors, strokes…</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+restore()
+]]></content>
+  <tabTrigger>restore</tabTrigger>
+  <description>DrawBot strongly recommends to use savedState() in a with statement instead.  Restore from a previously saved graphics state. This will restore the state of the canvas (with all the transformations) but also the state of colors, strokes…</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+saveImage(paths, **options)
+]]></content>
+  <tabTrigger>saveImage</tabTrigger>
+  <description>Save or export the canvas to a specified format. The path argument is a single destination path to save the current drawing actions.  The file extension is important because it will determine the format in which the image will be exported.  All supported file extensions: pdf, png, jpg, jpeg, tif, tiff, svg, gif, bmp, mp4, icns, *. (* will print out all actions.)  When exporting an animation or movie, each page represents a frame and the framerate is set by calling frameDuration() after each newPage().</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+printImage(pdf=None)
+]]></content>
+  <tabTrigger>printImage</tabTrigger>
+  <description>Export the canvas to a printing dialog, ready to print.  Optionally a pdf object can be provided.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+pdfImage()
+]]></content>
+  <tabTrigger>pdfImage</tabTrigger>
+  <description>Return the image as a pdf document object.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+textSize(txt, align=None, width=None, height=None)
+]]></content>
+  <tabTrigger>textSize</tabTrigger>
+  <description>Returns the size of a text with the current settings, like font, fontSize and lineHeight as a tuple (width, height).  Optionally a width constrain or height constrain can be provided to calculate the lenght or width of text with the given constrain.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+textOverflow(txt, box, align=None)
+]]></content>
+  <tabTrigger>textOverflow</tabTrigger>
+  <description>Returns the overflowed text without drawing the text.  A box could be a (x, y, w, h) or a bezierPath object.  Optionally an alignment can be set. Possible align values are: “left”, “center”, “right” and “justified”.  The default alignment is left.  Optionally txt can be a FormattedString. Optionally box can be a BezierPath.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+textBoxBaselines(txt, box, align=None)
+]]></content>
+  <tabTrigger>textBoxBaselines</tabTrigger>
+  <description>Returns a list of x, y coordinates indicating the start of each line for a given text in a given box.  A box could be a (x, y, w, h) or a bezierPath object.  Optionally an alignment can be set. Possible align values are: “left”, “center”, “right” and “justified”.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+textBoxCharacterBounds(txt, box, align=None)
+]]></content>
+  <tabTrigger>textBoxCharacterBounds</tabTrigger>
+  <description>Returns a list of typesetted bounding boxes ((x, y, w, h), baseLineOffset, characters, formattedString).  A box could be a (x, y, w, h) or a bezierPath object.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+installedFonts(supportsCharacters=None)
+]]></content>
+  <tabTrigger>installedFonts</tabTrigger>
+  <description>Returns a list of all installed fonts.  Optionally a string with supportsCharacters can be provided, the list of available installed fonts will be filterd by support of these characters,</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+installFont(path)
+]]></content>
+  <tabTrigger>installFont</tabTrigger>
+  <description>Install a font with a given path and the postscript font name will be returned. The postscript font name can be used to set the font as the active font.  Fonts are installed only for the current process. Fonts will not be accesible outside the scope of drawBot.  All installed fonts will automatically be uninstalled when the script is done.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+uninstallFont(path)
+]]></content>
+  <tabTrigger>uninstallFont</tabTrigger>
+  <description>Uninstall a font with a given path.  This function has been deprecated: please use the font path directly in all places that accept a font name.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+font(fontNameOrPath, fontSize=None, fontNumber=0)
+]]></content>
+  <tabTrigger>font</tabTrigger>
+  <description>Set a font with the name of the font. If a font path is given the font will be installed and used directly. Optionally a fontSize can be set directly. The default font, also used as fallback font, is ‘LucidaGrande’. The default fontSize is 10pt.  The name of the font relates to the font’s postscript name.  The font name is returned, which is handy when the font was loaded from a path.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+fontSize(fontSize)
+]]></content>
+  <tabTrigger>fontSize</tabTrigger>
+  <description>Set the font size in points. The default fontSize is 10pt.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+fallbackFont(fontNameOrPath, fontNumber=0)
+]]></content>
+  <tabTrigger>fallbackFont</tabTrigger>
+  <description>Set a fallback font, this is used whenever a glyph is not available in the current font.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+hyphenation(${1|True,False|})
+]]></content>
+  <tabTrigger>hyphenation</tabTrigger>
+  <description>Set hyphenation, True or False.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+lineHeight(value)
+]]></content>
+  <tabTrigger>lineHeight</tabTrigger>
+  <description>Set the line height.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+tracking(value)
+]]></content>
+  <tabTrigger>tracking</tabTrigger>
+  <description>Set the tracking between characters. It adds an absolute number of points between the characters.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+baselineShift(value)
+]]></content>
+  <tabTrigger>baselineShift</tabTrigger>
+  <description>Set the shift of the baseline.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+openTypeFeatures(frac=True, case=True, ...)
+]]></content>
+  <tabTrigger>openTypeFeatures</tabTrigger>
+  <description>Enable OpenType features.  Supported OpenType tags:  c2pc, c2sc, calt, case, cpsp, cswh, dlig, frac, liga, lnum, onum, ordn, pnum, rlig, sinf, smcp, ss01, ss02, ss03, ss04, ss05, ss06, ss07, ss08, ss09, ss10, ss11, ss12, ss13, ss14, ss15, ss16, ss17, ss18, ss19, ss20, subs, sups, swsh, titl, tnum. A resetFeatures argument can be set to True in order to get back to the default state.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+listOpenTypeFeatures(fontNameOrPath=None)
+]]></content>
+  <tabTrigger>listOpenTypeFeatures</tabTrigger>
+  <description>List all OpenType feature tags for the current font.  Optionally a fontNameOrPath can be given. If a font path is given the font will be used directly.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+fontVariations(wdth=0.6, wght=0.1, ...)
+]]></content>
+  <tabTrigger>fontVariations</tabTrigger>
+  <description>Pick a variation by axes values.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+listFontVariations(fontNameOrPath=None)
+]]></content>
+  <tabTrigger>listFontVariations</tabTrigger>
+  <description>List all variation axes for the current font.  Returns a dictionary with all axis tags instance with an info dictionary with the following keys: name, minValue and maxValue. For non variable fonts an empty dictionary is returned.  Optionally a fontNameOrPath can be given. If a font path is given the font will be used directly.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+listNamedInstances(fontNameOrPath=None)
+]]></content>
+  <tabTrigger>listNamedInstances</tabTrigger>
+  <description>List all named instances from a variable font for the current font.  Returns a dictionary with all named instance as postscript names with their location. For non variable fonts an empty dictionary is returned.  Optionally a fontNameOrPath can be given. If a font path is given the font will be used directly.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+tabs(*tabs)
+]]></content>
+  <tabTrigger>tabs</tabTrigger>
+  <description>Set tabs, tuples of (float, alignment) Aligment can be “left”, “center”, “right” or any other character. If a character is provided the alignment will be right and centered on the specified character.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+language(language)
+]]></content>
+  <tabTrigger>language</tabTrigger>
+  <description>Set the preferred language as language tag or None to use the default language.  Support is depending on local OS.  language() will activate the locl OpenType features, if supported by the current font.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+fontContainsCharacters(characters)
+]]></content>
+  <tabTrigger>fontContainsCharacters</tabTrigger>
+  <description>Return a bool if the current font contains the provided characters. Characters is a string containing one or more characters.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+fontContainsGlyph(glyphName)
+]]></content>
+  <tabTrigger>fontContainsGlyph</tabTrigger>
+  <description>Return a bool if the current font contains a provided glyph name.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+fontFilePath()
+]]></content>
+  <tabTrigger>fontFilePath</tabTrigger>
+  <description>Return the path to the file of the current font.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+listFontGlyphNames()
+]]></content>
+  <tabTrigger>listFontGlyphNames</tabTrigger>
+  <description>Return a list of glyph names supported by the current font.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+fontDescender()
+]]></content>
+  <tabTrigger>fontDescender</tabTrigger>
+  <description>Returns the current font descender, based on the current font and fontSize.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+fontAscender()
+]]></content>
+  <tabTrigger>fontAscender</tabTrigger>
+  <description>Returns the current font ascender, based on the current font and fontSize.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+fontXHeight()
+]]></content>
+  <tabTrigger>fontXHeight</tabTrigger>
+  <description>Returns the current font x-height, based on the current font and fontSize.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+fontCapHeight()
+]]></content>
+  <tabTrigger>fontCapHeight</tabTrigger>
+  <description>Returns the current font cap height, based on the current font and fontSize.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+fontLeading()
+]]></content>
+  <tabTrigger>fontLeading</tabTrigger>
+  <description>Returns the current font leading, based on the current font and fontSize.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+fontLineHeight()
+]]></content>
+  <tabTrigger>fontLineHeight</tabTrigger>
+  <description>Returns the current line height, based on the current font and fontSize. If a lineHeight is set, this value will be returned.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+FormattedString()
+]]></content>
+  <tabTrigger>FormattedString</tabTrigger>
+  <description>Return a string object that can handle text formatting.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+append(txt, **kwargs)
+]]></content>
+  <tabTrigger>append</tabTrigger>
+  <description>Add txt to the formatted string with some additional text formatting attributes:  font: the font to be used for the given text, if a font path is given the font will be installed and used directly. fallbackFont: the fallback font fontSize: the font size to be used for the given text fill: the fill color to be used for the given text cmykFill: the cmyk fill color to be used for the given text stroke: the stroke color to be used for the given text cmykStroke: the cmyk stroke color to be used for the given text strokeWidth: the strokeWidth to be used for the given text align: the alignment to be used for the given text lineHeight: the lineHeight to be used for the given text tracking: set tracking for the given text in absolute points baselineShift: set base line shift for the given text openTypeFeatures: enable OpenType features fontVariations: pick a variation by axes values tabs: enable tabs indent: the indent of a paragraph tailIndent: the tail indent of a paragraph firstLineIndent: the first line indent of a paragraph paragraphTopSpacing: the spacing at the top of a paragraph paragraphBottomSpacing: the spacing at the bottom of a paragraph language: the language of the text All formatting attributes follow the same notation as other similar DrawBot methods. A color is a tuple of (r, g, b, alpha), and a cmykColor is a tuple of (c, m, y, k, alpha).  Text can also be added with formattedString += “hello”. It will append the text with the current settings of the formatted string.</description>
+ <scope>source.python</scope>
+</snippet>
+
+
+<snippet>
+  <content><![CDATA[
+image(path, (x, y), alpha=1, pageNumber=None)
+]]></content>
+  <tabTrigger>image</tabTrigger>
+  <description>Add an image from a path with an offset and an alpha value. This should accept most common file types like pdf, jpg, png, tiff and gif.  Optionally an alpha can be provided, which is a value between 0 and 1.  Optionally a pageNumber can be provided when the path referes to a multi page pdf file.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+imageSize(path)
+]]></content>
+  <tabTrigger>imageSize</tabTrigger>
+  <description>Return the width and height of an image.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+imagePixelColor(path, (x, y))
+]]></content>
+  <tabTrigger>imagePixelColor</tabTrigger>
+  <description>Return the color r, g, b, a of an image at a specified x, y possition.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+imageResolution(path)
+]]></content>
+  <tabTrigger>imageResolution</tabTrigger>
+  <description>Return the image resolution for a given image.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+numberOfPages(path)
+]]></content>
+  <tabTrigger>numberOfPages</tabTrigger>
+  <description>Return the number of pages for a given pdf or (animated) gif.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+ImageObject(path=None)
+]]></content>
+  <tabTrigger>ImageObject</tabTrigger>
+  <description>Return a Image object, packed with filters. This is a reusable object.</description>
+ <scope>source.python</scope>
+</snippet>
+
+<snippet>
+  <content><![CDATA[
+Variable(variables, workSpace, continuous=True)
+]]></content>
+  <tabTrigger>Variable</tabTrigger>
+  <description>Build small UI for variables in a script.  The workSpace is usually globals() as you want to insert the variable in the current workspace. It is required that workSpace is a dict object.  The continuous argument controls whether the script is run when UI elements change. The default is True, which will execute the script immediately and continuously when the user input changes. When set to False, there will be an “Update” button added at the bottom of the window. The user will have to click this button to execute the script and see the changes. This is useful when the script is slow, and continuous execution would decrease responsiveness.</description>
+ <scope>source.python</scope>
+</snippet>
