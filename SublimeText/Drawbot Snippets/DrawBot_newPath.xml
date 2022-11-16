@@ -1,0 +1,8 @@
+  <snippet>
+	<content><![CDATA[
+  newPath()
+  ]]></content>
+	<tabTrigger>newPath</tabTrigger>
+	<description>Using bezier paths.</description>
+	<scope>source.python</scope>
+  </snippet>

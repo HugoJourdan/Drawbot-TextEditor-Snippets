@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+linearGradient(startPoint=None, endPoint=None, colors=None, locations=None)
+]]></content>
+  <tabTrigger>linearGradient</tabTrigger>
+  <description>A linear gradient fill with:  startPoint as (x, y) endPoint as (x, y) colors as a list of colors, described similary as fill locations of each color as a list of floats. (optionally) Setting a gradient will ignore the fill.</description>
+ <scope>source.python</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+fontXHeight()
+]]></content>
+  <tabTrigger>fontXHeight</tabTrigger>
+  <description>Returns the current font x-height, based on the current font and fontSize.</description>
+ <scope>source.python</scope>
+</snippet>

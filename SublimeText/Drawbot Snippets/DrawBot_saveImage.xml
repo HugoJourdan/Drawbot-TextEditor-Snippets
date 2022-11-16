@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+saveImage(paths, **options)
+]]></content>
+  <tabTrigger>saveImage</tabTrigger>
+  <description>Save or export the canvas to a specified format. The path argument is a single destination path to save the current drawing actions.  The file extension is important because it will determine the format in which the image will be exported.  All supported file extensions: pdf, png, jpg, jpeg, tif, tiff, svg, gif, bmp, mp4, icns, *. (* will print out all actions.)  When exporting an animation or movie, each page represents a frame and the framerate is set by calling frameDuration() after each newPage().</description>
+ <scope>source.python</scope>
+</snippet>

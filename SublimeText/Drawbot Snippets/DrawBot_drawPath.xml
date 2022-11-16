@@ -1,0 +1,8 @@
+  <snippet>
+	<content><![CDATA[
+  drawPath(path=None)
+  ]]></content>
+	<tabTrigger>drawPath</tabTrigger>
+	<description>Draw the current path, or draw the provided path.</description>
+	<scope>source.python</scope>
+  </snippet>

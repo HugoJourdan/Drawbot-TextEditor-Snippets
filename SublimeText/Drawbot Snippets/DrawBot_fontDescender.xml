@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+fontDescender()
+]]></content>
+  <tabTrigger>fontDescender</tabTrigger>
+  <description>Returns the current font descender, based on the current font and fontSize.</description>
+ <scope>source.python</scope>
+</snippet>

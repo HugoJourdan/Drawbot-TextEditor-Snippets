@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+width()
+]]></content>
+  <tabTrigger>width</tabTrigger>
+  <description>Returns the width of the current page.</description>
+ <scope>source.python</scope>
+</snippet>

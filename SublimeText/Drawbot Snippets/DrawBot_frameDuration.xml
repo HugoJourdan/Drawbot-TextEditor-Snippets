@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+frameDuration(seconds)
+]]></content>
+  <tabTrigger>frameDuration</tabTrigger>
+  <description>When exporting to mov or gif each frame can have duration set in seconds.</description>
+ <scope>source.python</scope>
+</snippet>

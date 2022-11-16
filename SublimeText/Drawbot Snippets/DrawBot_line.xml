@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+line((${1:x1}, ${2:y1}), (${3:x2}, ${4:y2})))
+]]></content>
+  <tabTrigger>line</tabTrigger>
+  <description>Draw an oval from position x, y with the given width and height.</description>
+ <scope>source.python</scope>
+</snippet>

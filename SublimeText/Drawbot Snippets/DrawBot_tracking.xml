@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+tracking(value)
+]]></content>
+  <tabTrigger>tracking</tabTrigger>
+  <description>Set the tracking between characters. It adds an absolute number of points between the characters.</description>
+ <scope>source.python</scope>
+</snippet>

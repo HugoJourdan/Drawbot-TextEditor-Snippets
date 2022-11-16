@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+skew(angle1, angle2=0, center=(0, 0))
+]]></content>
+  <tabTrigger>skew</tabTrigger>
+  <description>Skew the canvas with given angle1 and angle2.  If only one argument is provided a proportional skew is applied.  The center of skewing can optionally be set via the center keyword argument. By default this is the origin.</description>
+ <scope>source.python</scope>
+</snippet>

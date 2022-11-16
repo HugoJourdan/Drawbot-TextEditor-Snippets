@@ -1,0 +1,8 @@
+  <snippet>
+	<content><![CDATA[
+  moveTo(xy)
+  ]]></content>
+	<tabTrigger>moveTo</tabTrigger>
+	<description>Move to a point x, y.</description>
+	<scope>source.python</scope>
+  </snippet>

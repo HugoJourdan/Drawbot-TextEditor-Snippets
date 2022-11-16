@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+cmykShadow(offset, blur=None, color=None)
+]]></content>
+  <tabTrigger>cmykShadow</tabTrigger>
+  <description>Adds a cmyk shadow with an offset (x, y), blur and a color. The color argument must be a tuple similarly as cmykFill.</description>
+ <scope>source.python</scope>
+</snippet>

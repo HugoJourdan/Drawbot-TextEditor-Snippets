@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+font(fontNameOrPath, fontSize=None, fontNumber=0)
+]]></content>
+  <tabTrigger>font</tabTrigger>
+  <description>Set a font with the name of the font. If a font path is given the font will be installed and used directly. Optionally a fontSize can be set directly. The default font, also used as fallback font, is ‘LucidaGrande’. The default fontSize is 10pt.  The name of the font relates to the font’s postscript name.  The font name is returned, which is handy when the font was loaded from a path.</description>
+ <scope>source.python</scope>
+</snippet>

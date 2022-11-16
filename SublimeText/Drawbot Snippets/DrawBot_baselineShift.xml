@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+baselineShift(value)
+]]></content>
+  <tabTrigger>baselineShift</tabTrigger>
+  <description>Set the shift of the baseline.</description>
+ <scope>source.python</scope>
+</snippet>

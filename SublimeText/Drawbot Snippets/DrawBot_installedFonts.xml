@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+installedFonts(supportsCharacters=None)
+]]></content>
+  <tabTrigger>installedFonts</tabTrigger>
+  <description>Returns a list of all installed fonts.  Optionally a string with supportsCharacters can be provided, the list of available installed fonts will be filterd by support of these characters,</description>
+ <scope>source.python</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+  polygon((x1, y1), (x2, y2), ..., close=True)
+  ]]></content>
+	<tabTrigger>polygon</tabTrigger>
+	<description>Draws a polygon with n-amount of points. Optionally a close argument can be provided to open or close the path. As default a polygon is a closed path.</description>
+	<scope>source.python</scope>
+  </snippet>

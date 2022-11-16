@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+newDrawing()
+]]></content>
+  <tabTrigger>newDrawing</tabTrigger>
+  <description>Reset the drawing stack to the clean and empty stack.</description>
+ <scope>source.python</scope>
+</snippet>

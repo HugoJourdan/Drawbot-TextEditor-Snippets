@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+fallbackFont(fontNameOrPath, fontNumber=0)
+]]></content>
+  <tabTrigger>fallbackFont</tabTrigger>
+  <description>Set a fallback font, this is used whenever a glyph is not available in the current font.</description>
+ <scope>source.python</scope>
+</snippet>

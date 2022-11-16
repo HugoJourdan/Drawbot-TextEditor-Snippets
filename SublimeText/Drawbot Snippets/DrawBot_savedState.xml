@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+savedState()
+]]></content>
+  <tabTrigger>savedState</tabTrigger>
+  <description>Save and restore the current graphics state in a with statement.</description>
+ <scope>source.python</scope>
+</snippet>

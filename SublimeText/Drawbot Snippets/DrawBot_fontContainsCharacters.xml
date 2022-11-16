@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+fontContainsCharacters(characters)
+]]></content>
+  <tabTrigger>fontContainsCharacters</tabTrigger>
+  <description>Return a bool if the current font contains the provided characters. Characters is a string containing one or more characters.</description>
+ <scope>source.python</scope>
+</snippet>

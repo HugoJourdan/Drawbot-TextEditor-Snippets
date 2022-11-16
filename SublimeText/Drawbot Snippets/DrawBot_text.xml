@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+text(txt, (x, y), align=None)
+]]></content>
+  <tabTrigger>text</tabTrigger>
+  <description>Draw a text at a provided position.  Optionally an alignment can be set. Possible align values are: “left”, “center” and “right”.  The default alignment is left.  Optionally txt can be a FormattedString.</description>
+ <scope>source.python</scope>
+</snippet>

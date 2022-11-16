@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+addComponent(glyphName, transformation)
+]]></content>
+  <tabTrigger>addComponent</tabTrigger>
+  <description>Add a sub glyph. The ‘transformation’ argument must be a 6-tuple containing an affine transformation, or a Transform object from the fontTools.misc.transform module. More precisely: it should be a sequence containing 6 numbers.  A glyphSet is required during initialization of the BezierPath object.</description>
+ <scope>source.python</scope>
+</snippet>

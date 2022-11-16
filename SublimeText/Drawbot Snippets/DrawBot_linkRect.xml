@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+linkRect(name, (x, y, w, h))
+]]></content>
+  <tabTrigger>linkRect</tabTrigger>
+  <description>Add a clickable rectangle for a link within a PDF. Use linkDestination(name, (x, y)) with the same name to set the destination of the clickable rectangle.  The link rectangle will be set independent of the current context transformations.</description>
+ <scope>source.python</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+listFontVariations(fontNameOrPath=None)
+]]></content>
+  <tabTrigger>listFontVariations</tabTrigger>
+  <description>List all variation axes for the current font.  Returns a dictionary with all axis tags instance with an info dictionary with the following keys: name, minValue and maxValue. For non variable fonts an empty dictionary is returned.  Optionally a fontNameOrPath can be given. If a font path is given the font will be used directly.</description>
+ <scope>source.python</scope>
+</snippet>

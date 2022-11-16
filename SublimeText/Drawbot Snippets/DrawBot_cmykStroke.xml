@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+cmykStroke(c, m=None, y=None, k=None, alpha=1)
+]]></content>
+  <tabTrigger>cmykStroke</tabTrigger>
+  <description>Set a stroke using a CMYK color before drawing a shape. This is handy if the file is intended for print.  Sets the CMYK stroke color. Each value must be a float between 0.0 and 1.0.</description>
+ <scope>source.python</scope>
+</snippet>

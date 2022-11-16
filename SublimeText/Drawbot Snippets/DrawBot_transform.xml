@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+transform((xx, xy, yx, yy, x, y))
+]]></content>
+  <tabTrigger>transform</tabTrigger>
+  <description>Transform the canvas with a transformation matrix.</description>
+ <scope>source.python</scope>
+</snippet>

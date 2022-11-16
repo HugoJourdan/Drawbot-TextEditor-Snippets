@@ -1,0 +1,8 @@
+  <snippet>
+	<content><![CDATA[
+	qCurveTo(*points)
+	]]></content>
+	<tabTrigger>qCurveTo</tabTrigger>
+	<description>Quadratic curve with a given set of off curves to a on curve.</description>
+	<scope>source.python</scope>
+</snippet>

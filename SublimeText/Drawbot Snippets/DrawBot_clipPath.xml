@@ -1,0 +1,8 @@
+  <snippet>
+	<content><![CDATA[
+  clipPath(path=None)
+  ]]></content>
+	<tabTrigger>clipPath</tabTrigger>
+	<description>Use the given path as a clipping path, or the current path if no path was given.  Everything drawn after a clipPath() call will be clipped by the clipping path. To “undo” the clipping later, make sure you do the clipping inside a with savedState(): blockent path, or draw the provided path.</description>
+	<scope>source.python</scope>
+  </snippet>

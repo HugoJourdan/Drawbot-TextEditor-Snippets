@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+translate(x=0, y=0)
+]]></content>
+  <tabTrigger>translate</tabTrigger>
+  <description>Translate the canvas with a given offset.</description>
+ <scope>source.python</scope>
+</snippet>

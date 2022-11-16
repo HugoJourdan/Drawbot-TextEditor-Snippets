@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+listOpenTypeFeatures(fontNameOrPath=None)
+]]></content>
+  <tabTrigger>listOpenTypeFeatures</tabTrigger>
+  <description>List all OpenType feature tags for the current font.  Optionally a fontNameOrPath can be given. If a font path is given the font will be used directly.</description>
+ <scope>source.python</scope>
+</snippet>

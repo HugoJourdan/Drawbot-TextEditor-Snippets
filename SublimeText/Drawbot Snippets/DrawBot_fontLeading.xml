@@ -1,0 +1,9 @@
+
+<snippet>
+  <content><![CDATA[
+fontLeading()
+]]></content>
+  <tabTrigger>fontLeading</tabTrigger>
+  <description>Returns the current font leading, based on the current font and fontSize.</description>
+ <scope>source.python</scope>
+</snippet>

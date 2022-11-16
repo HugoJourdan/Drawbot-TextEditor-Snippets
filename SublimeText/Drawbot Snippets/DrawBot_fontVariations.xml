@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+fontVariations(wdth=0.6, wght=0.1, ...)
+]]></content>
+  <tabTrigger>fontVariations</tabTrigger>
+  <description>Pick a variation by axes values.</description>
+ <scope>source.python</scope>
+</snippet>

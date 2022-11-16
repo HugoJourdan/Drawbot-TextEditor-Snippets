@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+endPath()
+]]></content>
+  <tabTrigger>endPath</tabTrigger>
+  <description>End the current subpath. Calling this method has two distinct meanings depending on the context:  When the bezier path is used as a segment pen (using moveTo, lineTo, etc.), the current subpath will be finished as an open contour.  When the bezier path is used as a point pen (using beginPath, addPoint and endPath), the path will process all the points added with addPoint, finishing the current subpath.</description>
+ <scope>source.python</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+fontFilePath()
+]]></content>
+  <tabTrigger>fontFilePath</tabTrigger>
+  <description>Return the path to the file of the current font.</description>
+ <scope>source.python</scope>
+</snippet>

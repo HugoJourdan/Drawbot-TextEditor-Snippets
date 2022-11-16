@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+endDrawing()
+]]></content>
+  <tabTrigger>endDrawing</tabTrigger>
+  <description>Explicitly tell drawBot the drawing is done. This is advised when using drawBot as a standalone module.</description>
+ <scope>source.python</scope>
+</snippet>

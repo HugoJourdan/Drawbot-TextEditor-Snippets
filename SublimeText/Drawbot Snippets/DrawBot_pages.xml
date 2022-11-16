@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+pages()
+]]></content>
+  <tabTrigger>pages</tabTrigger>
+  <description>Return all pages.</description>
+ <scope>source.python</scope>
+</snippet>

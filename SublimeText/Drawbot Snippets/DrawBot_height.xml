@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+height()
+]]></content>
+  <tabTrigger>height</tabTrigger>
+  <description>Returns the height of the current page.</description>
+ <scope>source.python</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+imageSize(path)
+]]></content>
+  <tabTrigger>imageSize</tabTrigger>
+  <description>Return the width and height of an image.</description>
+ <scope>source.python</scope>
+</snippet>

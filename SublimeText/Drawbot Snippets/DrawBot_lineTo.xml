@@ -1,0 +1,8 @@
+  <snippet>
+	<content><![CDATA[
+  lineTo(xy)
+  ]]></content>
+	<tabTrigger>lineTo</tabTrigger>
+	<description>Line to a point x, y.</description>
+	<scope>source.python</scope>
+  </snippet>

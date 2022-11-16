@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+fontLineHeight()
+]]></content>
+  <tabTrigger>fontLineHeight</tabTrigger>
+  <description>Returns the current line height, based on the current font and fontSize. If a lineHeight is set, this value will be returned.</description>
+ <scope>source.python</scope>
+</snippet>

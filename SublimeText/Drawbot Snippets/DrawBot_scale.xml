@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+scale(x=1, y=None, center=(0, 0))
+]]></content>
+  <tabTrigger>scale</tabTrigger>
+  <description>Scale the canvas with a given x (horizontal scale) and y (vertical scale).  If only 1 argument is provided a proportional scale is applied.  The center of scaling can optionally be set via the center keyword argument. By default this is the origin.</description>
+ <scope>source.python</scope>
+</snippet>

@@ -1,0 +1,8 @@
+  <snippet>
+  <content><![CDATA[
+beginPath(identifier=None)
+]]></content>
+  <tabTrigger>beginPath</tabTrigger>
+  <description>Begin using the path as a so called point pen and start a new subpath.</description>
+ <scope>source.python</scope>
+</snippet>

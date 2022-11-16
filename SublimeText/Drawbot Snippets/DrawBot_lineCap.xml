@@ -1,0 +1,8 @@
+  <snippet>
+	<content><![CDATA[
+  lineCap(value)
+  ]]></content>
+	<tabTrigger>lineCap</tabTrigger>
+	<description>Set a line cap.  Possible values are butt, square and round.</description>
+	<scope>source.python</scope>
+  </snippet>

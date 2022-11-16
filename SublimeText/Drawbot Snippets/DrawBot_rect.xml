@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+rect(${1:x}, ${2:y}, ${3:w}, ${4:h})
+]]></content>
+  <tabTrigger>rect</tabTrigger>
+  <description>Draw a rectangle from position x, y with the given width and height.</description>
+ <scope>source.python</scope>
+</snippet>

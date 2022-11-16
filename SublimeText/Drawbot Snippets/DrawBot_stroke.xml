@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+stroke(r=None, g=None, b=None, alpha=1)
+]]></content>
+  <tabTrigger>stroke</tabTrigger>
+  <description>Sets the stroke color with a red, green, blue and alpha value. Each argument must a value float between 0 and 1.</description>
+ <scope>source.python</scope>
+</snippet>

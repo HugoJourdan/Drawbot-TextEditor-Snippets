@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+listNamedInstances(fontNameOrPath=None)
+]]></content>
+  <tabTrigger>listNamedInstances</tabTrigger>
+  <description>List all named instances from a variable font for the current font.  Returns a dictionary with all named instance as postscript names with their location. For non variable fonts an empty dictionary is returned.  Optionally a fontNameOrPath can be given. If a font path is given the font will be used directly.</description>
+ <scope>source.python</scope>
+</snippet>

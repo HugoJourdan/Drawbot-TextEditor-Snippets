@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+pdfImage()
+]]></content>
+  <tabTrigger>pdfImage</tabTrigger>
+  <description>Return the image as a pdf document object.</description>
+ <scope>source.python</scope>
+</snippet>

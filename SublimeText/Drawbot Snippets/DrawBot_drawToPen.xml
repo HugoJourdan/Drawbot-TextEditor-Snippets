@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+drawToPen(pen)
+]]></content>
+  <tabTrigger>drawToPen</tabTrigger>
+  <description>Draw the bezier path into a pen</description>
+ <scope>source.python</scope>
+</snippet>

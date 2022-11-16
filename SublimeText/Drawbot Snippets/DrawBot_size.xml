@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+size(width, height=None)
+]]></content>
+  <tabTrigger>size</tabTrigger>
+  <description>Set the width and height of the canvas. Without calling size() the default drawing board is 1000 by 1000 points.  Alternatively size(‘A4’) with a supported papersizes or size(‘screen’) setting the current screen size as size, can be used.  Afterwards the functions width() and height() can be used for calculations.  You have to use size() before any drawing-related code, and you can’t use size() in a multi-page document. Use newPage(w, h) to set the correct dimensions for each page.</description>
+ <scope>source.python</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+addPoint(point, segmentType=None, smooth=False, name=None, identifier=None, **kwargs)
+]]></content>
+  <tabTrigger>addPoint</tabTrigger>
+  <description>Use the path as a point pen and add a point to the current subpath. beginPath must have been called prior to adding points with addPoint calls.</description>
+ <scope>source.python</scope>
+</snippet>

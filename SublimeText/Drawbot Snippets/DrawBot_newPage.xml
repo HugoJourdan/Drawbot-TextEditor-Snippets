@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+newPage(width=None, height=None)
+]]></content>
+  <tabTrigger>newPage</tabTrigger>
+  <description>Create a new canvas to draw in. This will act like a page in a pdf or a frame in a mov.  Optionally a width and height argument can be provided to set the size. If not provided the default size will be used.  Alternatively size(‘A4’) with a supported papersizes or size(‘screen’) setting the current screen size as size, can be used.</description>
+ <scope>source.python</scope>
+</snippet>

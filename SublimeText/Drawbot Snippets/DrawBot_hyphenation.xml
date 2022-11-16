@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+hyphenation(${1|True,False|})
+]]></content>
+  <tabTrigger>hyphenation</tabTrigger>
+  <description>Set hyphenation, True or False.</description>
+ <scope>source.python</scope>
+</snippet>

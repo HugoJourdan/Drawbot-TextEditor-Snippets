@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+ImageObject(path=None)
+]]></content>
+  <tabTrigger>ImageObject</tabTrigger>
+  <description>Return a Image object, packed with filters. This is a reusable object.</description>
+ <scope>source.python</scope>
+</snippet>

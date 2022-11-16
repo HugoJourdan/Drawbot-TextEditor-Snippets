@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+save()
+]]></content>
+  <tabTrigger>save</tabTrigger>
+  <description>DrawBot strongly recommends to use savedState() in a with statement instead.  Save the current graphics state. This will save the state of the canvas (with all the transformations) but also the state of the colors, strokes…</description>
+ <scope>source.python</scope>
+</snippet>

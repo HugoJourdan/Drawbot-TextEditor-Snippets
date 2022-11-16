@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+language(language)
+]]></content>
+  <tabTrigger>language</tabTrigger>
+  <description>Set the preferred language as language tag or None to use the default language.  Support is depending on local OS.  language() will activate the locl OpenType features, if supported by the current font.</description>
+ <scope>source.python</scope>
+</snippet>

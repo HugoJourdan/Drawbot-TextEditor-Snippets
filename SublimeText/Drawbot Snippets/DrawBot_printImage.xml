@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+printImage(pdf=None)
+]]></content>
+  <tabTrigger>printImage</tabTrigger>
+  <description>Export the canvas to a printing dialog, ready to print.  Optionally a pdf object can be provided.</description>
+ <scope>source.python</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+pageCount()
+]]></content>
+  <tabTrigger>pageCount</tabTrigger>
+  <description>Returns the current page count.</description>
+ <scope>source.python</scope>
+</snippet>

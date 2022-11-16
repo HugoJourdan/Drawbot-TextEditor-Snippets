@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+FormattedString()
+]]></content>
+  <tabTrigger>FormattedString</tabTrigger>
+  <description>Return a string object that can handle text formatting.</description>
+ <scope>source.python</scope>
+</snippet>

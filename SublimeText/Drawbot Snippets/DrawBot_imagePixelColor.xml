@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+imagePixelColor(path, (x, y))
+]]></content>
+  <tabTrigger>imagePixelColor</tabTrigger>
+  <description>Return the color r, g, b, a of an image at a specified x, y possition.</description>
+ <scope>source.python</scope>
+</snippet>

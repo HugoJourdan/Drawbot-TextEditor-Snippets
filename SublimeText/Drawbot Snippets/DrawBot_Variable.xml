@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+Variable(variables, workSpace, continuous=True)
+]]></content>
+  <tabTrigger>Variable</tabTrigger>
+  <description>Build small UI for variables in a script.  The workSpace is usually globals() as you want to insert the variable in the current workspace. It is required that workSpace is a dict object.  The continuous argument controls whether the script is run when UI elements change. The default is True, which will execute the script immediately and continuously when the user input changes. When set to False, there will be an “Update” button added at the bottom of the window. The user will have to click this button to execute the script and see the changes. This is useful when the script is slow, and continuous execution would decrease responsiveness.</description>
+ <scope>source.python</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+uninstallFont(path)
+]]></content>
+  <tabTrigger>uninstallFont</tabTrigger>
+  <description>Uninstall a font with a given path.  This function has been deprecated: please use the font path directly in all places that accept a font name.</description>
+ <scope>source.python</scope>
+</snippet>

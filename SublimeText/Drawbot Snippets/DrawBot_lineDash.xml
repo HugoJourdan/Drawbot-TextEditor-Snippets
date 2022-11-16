@@ -1,0 +1,8 @@
+  <snippet>
+	<content><![CDATA[
+  lineDash(*value)
+  ]]></content>
+	<tabTrigger>lineDash</tabTrigger>
+	<description>Set a line dash with any given amount of lenghts. Uneven lenghts will have a visible stroke, even lenghts will be invisible.</description>
+	<scope>source.python</scope>
+  </snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+fontSize(fontSize)
+]]></content>
+  <tabTrigger>fontSize</tabTrigger>
+  <description>Set the font size in points. The default fontSize is 10pt.</description>
+ <scope>source.python</scope>
+</snippet>

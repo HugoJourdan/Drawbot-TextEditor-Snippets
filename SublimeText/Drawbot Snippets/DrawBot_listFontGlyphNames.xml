@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+listFontGlyphNames()
+]]></content>
+  <tabTrigger>listFontGlyphNames</tabTrigger>
+  <description>Return a list of glyph names supported by the current font.</description>
+ <scope>source.python</scope>
+</snippet>

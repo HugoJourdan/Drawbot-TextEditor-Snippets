@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+numberOfPages(path)
+]]></content>
+  <tabTrigger>numberOfPages</tabTrigger>
+  <description>Return the number of pages for a given pdf or (animated) gif.</description>
+ <scope>source.python</scope>
+</snippet>

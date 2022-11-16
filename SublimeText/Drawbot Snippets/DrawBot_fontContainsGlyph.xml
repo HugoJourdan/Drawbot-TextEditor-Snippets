@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+fontContainsGlyph(glyphName)
+]]></content>
+  <tabTrigger>fontContainsGlyph</tabTrigger>
+  <description>Return a bool if the current font contains a provided glyph name.</description>
+ <scope>source.python</scope>
+</snippet>

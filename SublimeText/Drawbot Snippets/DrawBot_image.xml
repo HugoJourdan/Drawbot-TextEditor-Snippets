@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+image(path, (x, y), alpha=1, pageNumber=None)
+]]></content>
+  <tabTrigger>image</tabTrigger>
+  <description>Add an image from a path with an offset and an alpha value. This should accept most common file types like pdf, jpg, png, tiff and gif.  Optionally an alpha can be provided, which is a value between 0 and 1.  Optionally a pageNumber can be provided when the path referes to a multi page pdf file.</description>
+ <scope>source.python</scope>
+</snippet>

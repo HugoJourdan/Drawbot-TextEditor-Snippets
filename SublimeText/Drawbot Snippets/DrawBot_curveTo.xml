@@ -1,0 +1,8 @@
+  <snippet>
+	<content><![CDATA[
+  curveTo(xy1, xy2, xy3)
+  ]]></content>
+	<tabTrigger>curveTo</tabTrigger>
+	<description>Curve to a point x3, y3. With given bezier handles x1, y1 and x2, y2.</description>
+	<scope>source.python</scope>
+  </snippet>

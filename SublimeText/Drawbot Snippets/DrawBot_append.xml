@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+append(txt, **kwargs)
+]]></content>
+  <tabTrigger>append</tabTrigger>
+  <description>Add txt to the formatted string with some additional text formatting attributes:  font: the font to be used for the given text, if a font path is given the font will be installed and used directly. fallbackFont: the fallback font fontSize: the font size to be used for the given text fill: the fill color to be used for the given text cmykFill: the cmyk fill color to be used for the given text stroke: the stroke color to be used for the given text cmykStroke: the cmyk stroke color to be used for the given text strokeWidth: the strokeWidth to be used for the given text align: the alignment to be used for the given text lineHeight: the lineHeight to be used for the given text tracking: set tracking for the given text in absolute points baselineShift: set base line shift for the given text openTypeFeatures: enable OpenType features fontVariations: pick a variation by axes values tabs: enable tabs indent: the indent of a paragraph tailIndent: the tail indent of a paragraph firstLineIndent: the first line indent of a paragraph paragraphTopSpacing: the spacing at the top of a paragraph paragraphBottomSpacing: the spacing at the bottom of a paragraph language: the language of the text All formatting attributes follow the same notation as other similar DrawBot methods. A color is a tuple of (r, g, b, alpha), and a cmykColor is a tuple of (c, m, y, k, alpha).  Text can also be added with formattedString += “hello”. It will append the text with the current settings of the formatted string.</description>
+ <scope>source.python</scope>
+</snippet>

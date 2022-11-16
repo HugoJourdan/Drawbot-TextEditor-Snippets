@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+restore()
+]]></content>
+  <tabTrigger>restore</tabTrigger>
+  <description>DrawBot strongly recommends to use savedState() in a with statement instead.  Restore from a previously saved graphics state. This will restore the state of the canvas (with all the transformations) but also the state of colors, strokes…</description>
+ <scope>source.python</scope>
+</snippet>

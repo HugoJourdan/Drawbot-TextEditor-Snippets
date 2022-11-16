@@ -1,0 +1,8 @@
+  <snippet>
+	<content><![CDATA[
+  BezierPath(path=None, glyphSet=None)
+  ]]></content>
+	<tabTrigger>BezierPath</tabTrigger>
+	<description>Return a BezierPath object. This is a reusable object, if you want to draw the same over and over again.</description>
+	<scope>source.python</scope>
+  </snippet>

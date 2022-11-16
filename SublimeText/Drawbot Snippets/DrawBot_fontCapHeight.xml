@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+fontCapHeight()
+]]></content>
+  <tabTrigger>fontCapHeight</tabTrigger>
+  <description>Returns the current font cap height, based on the current font and fontSize.</description>
+ <scope>source.python</scope>
+</snippet>

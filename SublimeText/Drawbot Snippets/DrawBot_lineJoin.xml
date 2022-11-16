@@ -1,0 +1,9 @@
+  <snippet>
+	<content><![CDATA[
+  lineJoin(value)
+  
+  ]]></content>
+	<tabTrigger>lineJoin</tabTrigger>
+	<description>Set a line join.  Possible values are miter, round and bevel.</description>
+	<scope>source.python</scope>
+  </snippet>

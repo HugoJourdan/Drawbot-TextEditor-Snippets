@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+imageResolution(path)
+]]></content>
+  <tabTrigger>imageResolution</tabTrigger>
+  <description>Return the image resolution for a given image.</description>
+ <scope>source.python</scope>
+</snippet>

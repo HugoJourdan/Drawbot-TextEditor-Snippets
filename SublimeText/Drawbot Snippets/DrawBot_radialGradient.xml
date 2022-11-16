@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+radialGradient(startPoint=None, endPoint=None, colors=None, locations=None, startRadius=0, endRadius=100)
+]]></content>
+  <tabTrigger>radialGradient</tabTrigger>
+  <description>A radial gradient fill with:  startPoint as (x, y) endPoint as (x, y) colors as a list of colors, described similary as fill locations of each color as a list of floats. (optionally) startRadius radius around the startPoint in degrees (optionally) endRadius radius around the endPoint in degrees (optionally) Setting a gradient will ignore the fill.</description>
+ <scope>source.python</scope>
+</snippet>
